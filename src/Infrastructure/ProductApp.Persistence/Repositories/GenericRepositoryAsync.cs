@@ -9,10 +9,10 @@ using ProductApp.Persistence.Context;
 
 namespace ProductApp.Persistence.Repositories
 {
-    public class GenericRepository<T> : IGenericRepositoryAsync<T> where T : BaseEntity
+    public class GenericRepositoryAsync<T> : IGenericRepositoryAsync<T> where T : BaseEntity
     {
         private readonly ApplicationDbContext context;
-        public GenericRepository(ApplicationDbContext context)
+        public GenericRepositoryAsync(ApplicationDbContext context)
         {
             this.context = context;
         }

@@ -7,7 +7,7 @@ using ProductApp.Persistence.Context;
 
 namespace ProductApp.Persistence.Repositories
 {
-    public class ProductRepository : GenericRepository<Product>, IProductRepository
+    public class ProductRepository : GenericRepositoryAsync<Product>, IProductRepository
     {
         public ProductRepository(ApplicationDbContext context) : base(context)
         {

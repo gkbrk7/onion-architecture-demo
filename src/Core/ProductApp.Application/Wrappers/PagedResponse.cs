@@ -4,17 +4,7 @@ namespace ProductApp.Application.Wrappers
     {
         public int PageNumber { get; set; }
         public int PageSize { get; set; }
-        public PagedResponse(T value) : base(value)
-        {
-        }
-
-        public PagedResponse()
-        {
-            PageNumber = 1;
-            PageSize = 10;
-        }
-
-        public PagedResponse(int PageNumber, int PageSize)
+        public PagedResponse(T value, int PageNumber = 1, int PageSize = 10) : base(value)
         {
             this.PageNumber = PageNumber;
             this.PageSize = PageSize;
